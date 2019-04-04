@@ -35,11 +35,13 @@ export default function createLogger({
     serviceName,
     daysToKeep = 1, // 日志文件保留天数
     logRolling = 'day', // 日志切割方式 按天或者按小时
+    debug = false, // debug模式下, 日志会写入文件
     defaultLog = {}
 }: {
     serviceName: string,
     daysToKeep?: number,
     logRolling?: LogRolling,
+    debug?: boolean,
     defaultLog?: DefaultLog,
 }) {
     // customLevels value大于FATAL 小于MARK
@@ -110,7 +112,7 @@ export default function createLogger({
         appenders,
         categories: {
             default: {
-                appenders: isProd ? ['out', this.allLevels] : ['out'],
+                appenders: (debug || isProd) ? ['out', this.allLevels] : ['out'],
                 level: 'all',
             },
         },

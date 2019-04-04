@@ -12,5 +12,8 @@ web直播使用的日志模块，封装自[log4js](https://github.com/log4js-nod
     import createLogger from '@ks/log4js';
     const logger = createLogger({
         serviceName: 'kuaishou-frontend-live',
+        // 日志在生产环境会写入文件，其他环境输出到stdout
+        // 在开发模式下如果要写入文件，可以这样
+        debug: true,
     });
 ```
