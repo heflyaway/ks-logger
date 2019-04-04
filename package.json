@@ -1,5 +1,5 @@
 {
-  "name": "ks-logger",
+  "name": "@ks/log4js",
   "version": "1.0.0",
   "main": "lib/index.js",
   "repository": "https://github.com/heflyaway/ks-logger.git",
