@@ -84,8 +84,8 @@ export default function createLogger({
             maxLevel: appenderName,
         };
         return {
-            [appenderNameFile]: appenderName === 'common' ? logLevelFilterAppender : dateFileAppender,
-            [appenderName]: appender,
+            [appenderNameFile]: dateFileAppender,
+            [appenderName]: appenderName === 'common' ? logLevelFilterAppender : appender,
         };
     }
 
