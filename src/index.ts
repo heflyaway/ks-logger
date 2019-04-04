@@ -6,6 +6,7 @@ import {configure,
 } from 'log4js';
 import path from 'path';
 import jsonLayout from './jsonLayout';
+const debug = require('debug')('log4js');
 
 // 自定义日志级别
 const customLevels = ['monitor', 'metrics'];
@@ -42,11 +43,6 @@ export default function createLogger({
     logRolling?: LogRolling,
     defaultLog?: DefaultLog,
 }) {
-    this.serviceName = serviceName;
-    this.daysToKeep = daysToKeep;
-    this.logRolling = logRolling;
-    this.defaultLog = defaultLog;
-
     // customLevels value大于FATAL 小于MARK
     const levels: object = {};
     const levelVal = 100000;
@@ -62,14 +58,14 @@ export default function createLogger({
         const appenderNameFile = `${appenderName}File`;
         const dateFileAppender: DateFileAppender = {
             type: 'dateFile',
-            filename: getLogFilename(appenderName === 'common' ? '' : appenderName),
-            pattern: this.logRolling === 'day' ? '.yyyy-MM-dd' : '.yyyy-MM-dd-hh',
-            daysToKeep: this.daysToKeep,
+            filename: getLogFilename(serviceName, appenderName === 'common' ? '' : appenderName),
+            pattern: logRolling === 'day' ? '.yyyy-MM-dd' : '.yyyy-MM-dd-hh',
+            daysToKeep,
             layout: {
                 type: 'json',
                 context: {
-                    serviceName: this.serviceName,
-                    ...this.defaultLog,
+                    serviceName,
+                    ...defaultLog,
                 },
             },
         };
@@ -92,8 +88,12 @@ export default function createLogger({
         };
     }
 
+    const allLevels = [
+        'common',
+        ...customLevels,
+    ]
     const customAppenders = {};
-    this.allLevels.map((level) => {
+    allLevels.map((level) => {
         Object.assign(customAppenders, generateAppender(level));
     });
 
@@ -105,13 +105,15 @@ export default function createLogger({
         ...customAppenders,
     };
 
+    debug(appenders);
+
     configure({
         // @ts-ignore
         levels,
         appenders,
         categories: {
             default: {
-                appenders: isProd ? ['out', ...this.allLevels] : ['out'],
+                appenders: isProd ? ['out', this.allLevels] : ['out'],
                 level: 'all',
             },
         },
@@ -122,7 +124,7 @@ export default function createLogger({
     return logger;
 }
 
-function getLogFilename(logType: string = '') {
-    const filename = logType ? `${this.serviceName}-${logType}` : `${this.serviceName}`;
+function getLogFilename(serviceName: string, logType: string = '') {
+    const filename = logType ? `${serviceName}-${logType}` : `${serviceName}`;
     return path.join(process.cwd(), 'log', `${filename}.log`);
 }
