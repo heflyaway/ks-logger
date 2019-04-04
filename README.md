@@ -1,4 +1,4 @@
-# ks-logger
+# @ks/log4js
 web直播使用的日志模块，封装自[log4js](https://github.com/log4js-node/log4js-node)
 
 除了log4js原有的日志，增加了自定义的monitor metrics等日志

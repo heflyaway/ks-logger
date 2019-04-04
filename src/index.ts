@@ -112,7 +112,7 @@ export default function createLogger({
         appenders,
         categories: {
             default: {
-                appenders: (debug || isProd) ? ['out', this.allLevels] : ['out'],
+                appenders: (debug || isProd) ? ['out', ...allLevels] : ['out'],
                 level: 'all',
             },
         },
