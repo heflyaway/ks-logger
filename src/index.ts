@@ -4,7 +4,7 @@ import {configure,
     DateFileAppender,
     LogLevelFilterAppender,
 } from 'log4js';
-import path from 'path';
+import {join} from 'path';
 import jsonLayout from './jsonLayout';
 const debug = require('debug')('log4js');
 
@@ -126,5 +126,5 @@ export default function createLogger({
 
 function getLogFilename(serviceName: string, logType: string = '') {
     const filename = logType ? `${serviceName}-${logType}` : `${serviceName}`;
-    return path.join(process.cwd(), 'log', `${filename}.log`);
+    return join(process.cwd(), 'log', `${filename}.log`);
 }
