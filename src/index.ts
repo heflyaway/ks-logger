@@ -6,7 +6,6 @@ import {configure,
 } from 'log4js';
 import {join} from 'path';
 import jsonLayout from './jsonLayout';
-const debug = require('debug')('log4js');
 
 // 自定义日志级别
 const customLevels = ['monitor', 'metrics'];
@@ -49,7 +48,7 @@ export default function createLogger({
     customLevels.forEach((level, index) => {
         levels[level.toUpperCase()] = {
             value: levelVal * (index + 1),
-            colour: 'black;'
+            colour: 'black',
         }
     });
 
@@ -83,8 +82,8 @@ export default function createLogger({
             maxLevel: appenderName,
         };
         return {
-            appenderNameFile: appenderName === 'common' ? logLevelFilterAppender : dateFileAppender,
-            appenderName: appender,
+            [appenderNameFile]: appenderName === 'common' ? logLevelFilterAppender : dateFileAppender,
+            [appenderName]: appender,
         };
     }
 
@@ -104,8 +103,6 @@ export default function createLogger({
         },
         ...customAppenders,
     };
-
-    debug(appenders);
 
     configure({
         // @ts-ignore
