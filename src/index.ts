@@ -7,9 +7,8 @@ import {configure,
 import {join} from 'path';
 import jsonLayout from './jsonLayout';
 
-// 自定义日志级别
-const customLevels = ['monitor', 'metrics'];
 // 写在typings里面会覆盖模块自带的d.ts文件...
+// TODO: 如何动态生成
 declare module 'log4js' {
     export interface Logger {
         monitor(message: any, ...args: any[]): void;
@@ -33,12 +32,14 @@ interface DefaultLog {
 
 export default function createLogger({
     serviceName,
+    customLevels = [],
     daysToKeep = 1, // 日志文件保留天数
     logRolling = 'day', // 日志切割方式 按天或者按小时
     debug = false, // debug模式下, 日志会写入文件
     defaultLog = {}
 }: {
     serviceName: string,
+    customLevels?: string[],
     daysToKeep?: number,
     logRolling?: LogRolling,
     debug?: boolean,

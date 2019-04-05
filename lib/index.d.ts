@@ -8,8 +8,9 @@ declare type LogRolling = 'day' | 'hour';
 interface DefaultLog {
     [key: string]: any;
 }
-export default function createLogger({ serviceName, daysToKeep, logRolling, debug, defaultLog }: {
+export default function createLogger({ serviceName, customLevels, daysToKeep, logRolling, debug, defaultLog }: {
     serviceName: string;
+    customLevels?: string[];
     daysToKeep?: number;
     logRolling?: LogRolling;
     debug?: boolean;
