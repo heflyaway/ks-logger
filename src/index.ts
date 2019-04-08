@@ -8,7 +8,6 @@ import {join} from 'path';
 import jsonLayout from './jsonLayout';
 
 // 写在typings里面会覆盖模块自带的d.ts文件...
-// TODO: 如何动态生成
 declare module 'log4js' {
     export interface Logger {
         monitor(message: any, ...args: any[]): void;
