@@ -5,7 +5,7 @@ import {configure,
     LogLevelFilterAppender,
 } from 'log4js';
 import {join} from 'path';
-import jsonLayout from './jsonLayout';
+import {jsonLayout} from './jsonLayout';
 
 // 写在typings里面会覆盖模块自带的d.ts文件...
 declare module 'log4js' {
@@ -29,7 +29,7 @@ interface DefaultLog {
     [key: string]: any
 }
 
-export default function createLogger({
+export function createLogger({
     serviceName,
     customLevels = [],
     daysToKeep = 1, // 日志文件保留天数
@@ -122,6 +122,8 @@ export default function createLogger({
 
     return logger;
 }
+
+export default createLogger;
 
 function getLogFilename(serviceName: string, logType: string = '') {
     const filename = logType ? `${serviceName}-${logType}` : `${serviceName}`;

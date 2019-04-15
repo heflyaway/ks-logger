@@ -7,7 +7,7 @@ function formatUTCDate(date: Date) {
 }
 
 // 日志转json
-export default function jsonLayout(config: any) {
+export function jsonLayout(config: any) {
     return (logEvent: LoggingEvent) => {
         try {
             const logMessage = Array.isArray(logEvent.data) ? logEvent.data : [logEvent.data];
