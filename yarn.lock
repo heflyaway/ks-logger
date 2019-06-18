@@ -9,17 +9,17 @@
   dependencies:
     date-fns "*"
 
-"@types/lodash@^4.14.123":
-  version "4.14.123"
-  resolved "https://npm.corp.kuaishou.com/@types%2flodash/-/lodash-4.14.123.tgz#39be5d211478c8dd3bdae98ee75bb7efe4abfe4d"
-  integrity sha1-Ob5dIRR4yN072umO51u37+Sr/k0=
+"@types/lodash@^4.14.134":
+  version "4.14.134"
+  resolved "https://npm.corp.kuaishou.com/@types%2flodash/-/lodash-4.14.134.tgz#9032b440122db3a2a56200e91191996161dde5b9"
+  integrity sha1-kDK0QBIts6KlYgDpEZGZYWHd5bk=
 
-"@types/node@^11.13.0":
-  version "11.13.0"
-  resolved "https://npm.corp.kuaishou.com/@types%2fnode/-/node-11.13.0.tgz#b0df8d6ef9b5001b2be3a94d909ce3c29a80f9e1"
-  integrity sha1-sN+Nbvm1ABsr46lNkJzjwpqA+eE=
+"@types/node@^12.0.8":
+  version "12.0.8"
+  resolved "https://npm.corp.kuaishou.com/@types%2fnode/-/node-12.0.8.tgz#551466be11b2adc3f3d47156758f610bd9f6b1d8"
+  integrity sha1-VRRmvhGyrcPz1HFWdY9hC9n2sdg=
 
-async@^2.6.1:
+async@^2.6.2:
   version "2.6.2"
   resolved "https://npm.corp.kuaishou.com/async/-/async-2.6.2.tgz#18330ea7e6e313887f5d2f2a904bac6fe4dd5381"
   integrity sha1-GDMOp+bjE4h/XS8qkEusb+TdU4E=
@@ -36,7 +36,7 @@ date-format@^2.0.0:
   resolved "https://npm.corp.kuaishou.com/date-format/-/date-format-2.0.0.tgz#7cf7b172f1ec564f0003b39ea302c5498fb98c8f"
   integrity sha1-fPexcvHsVk8AA7OeowLFSY+5jI8=
 
-debug@^3.1.0:
+debug@^3.2.6:
   version "3.2.6"
   resolved "https://npm.corp.kuaishou.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha1-6D0X3hbYp++3cX7b5fsQE17uYps=
@@ -50,12 +50,17 @@ debug@^4.1.1:
   dependencies:
     ms "^2.1.1"
 
+fast-safe-stringify@^2.0.6:
+  version "2.0.6"
+  resolved "https://npm.corp.kuaishou.com/fast-safe-stringify/-/fast-safe-stringify-2.0.6.tgz#04b26106cc56681f51a044cfc0d76cf0008ac2c2"
+  integrity sha1-BLJhBsxWaB9RoETPwNds8ACKwsI=
+
 flatted@^2.0.0:
   version "2.0.0"
   resolved "https://npm.corp.kuaishou.com/flatted/-/flatted-2.0.0.tgz#55122b6536ea496b4b44893ee2608141d10d9916"
   integrity sha1-VRIrZTbqSWtLRIk+4mCBQdENmRY=
 
-fs-extra@^7.0.0:
+fs-extra@^7.0.1:
   version "7.0.1"
   resolved "https://npm.corp.kuaishou.com/fs-extra/-/fs-extra-7.0.1.tgz#4f189c44aa123b895f722804f55ea23eadc348e9"
   integrity sha1-TxicRKoSO4lfcigE9V6iPq3DSOk=
@@ -76,47 +81,47 @@ jsonfile@^4.0.0:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
-lodash@^4.17.10, lodash@^4.17.11:
+lodash@^4.17.11:
   version "4.17.11"
   resolved "https://npm.corp.kuaishou.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha1-s56mIp72B+zYniyN8SU2iRysm40=
 
-log4js@^4.1.0:
-  version "4.1.0"
-  resolved "https://npm.corp.kuaishou.com/log4js/-/log4js-4.1.0.tgz#57983c6a443546a8c8607e9cb045d2a117c27644"
-  integrity sha1-V5g8akQ1RqjIYH6csEXSoRfCdkQ=
+log4js@^4.3.1:
+  version "4.3.1"
+  resolved "https://npm.corp.kuaishou.com/log4js/-/log4js-4.3.1.tgz#026cb6fb3cd5b9c4682a96478c356c97b497686e"
+  integrity sha1-Amy2+zzVucRoKpZHjDVsl7SXaG4=
   dependencies:
     date-format "^2.0.0"
     debug "^4.1.1"
     flatted "^2.0.0"
     rfdc "^1.1.2"
-    streamroller "^1.0.4"
+    streamroller "^1.0.5"
 
 ms@^2.1.1:
-  version "2.1.1"
-  resolved "https://npm.corp.kuaishou.com/ms/-/ms-2.1.1.tgz#30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a"
-  integrity sha1-MKWGTrPrsKZvLr5tcnrwagnYbgo=
+  version "2.1.2"
+  resolved "https://npm.corp.kuaishou.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
+  integrity sha1-0J0fNXtEP0kzgqjrPM0YOHKuYAk=
 
 rfdc@^1.1.2:
-  version "1.1.2"
-  resolved "https://npm.corp.kuaishou.com/rfdc/-/rfdc-1.1.2.tgz#e6e72d74f5dc39de8f538f65e00c36c18018e349"
-  integrity sha1-5uctdPXcOd6PU49l4Aw2wYAY40k=
+  version "1.1.4"
+  resolved "https://npm.corp.kuaishou.com/rfdc/-/rfdc-1.1.4.tgz#ba72cc1367a0ccd9cf81a870b3b58bd3ad07f8c2"
+  integrity sha1-unLME2egzNnPgahws7WL060H+MI=
 
-streamroller@^1.0.4:
-  version "1.0.4"
-  resolved "https://npm.corp.kuaishou.com/streamroller/-/streamroller-1.0.4.tgz#d485c7624796d5e2eb34190c79afcbf006afb5e6"
-  integrity sha1-1IXHYkeW1eLrNBkMea/L8AavteY=
+streamroller@^1.0.5:
+  version "1.0.5"
+  resolved "https://npm.corp.kuaishou.com/streamroller/-/streamroller-1.0.5.tgz#71660c20b06b1a7b204d46085731ad13c10a562d"
+  integrity sha1-cWYMILBrGnsgTUYIVzGtE8EKVi0=
   dependencies:
-    async "^2.6.1"
+    async "^2.6.2"
     date-format "^2.0.0"
-    debug "^3.1.0"
-    fs-extra "^7.0.0"
-    lodash "^4.17.10"
+    debug "^3.2.6"
+    fs-extra "^7.0.1"
+    lodash "^4.17.11"
 
-typescript@^3.4.1:
-  version "3.4.1"
-  resolved "https://npm.corp.kuaishou.com/typescript/-/typescript-3.4.1.tgz#b6691be11a881ffa9a05765a205cb7383f3b63c6"
-  integrity sha1-tmkb4RqIH/qaBXZaIFy3OD87Y8Y=
+typescript@^3.5.2:
+  version "3.5.2"
+  resolved "https://npm.corp.kuaishou.com/typescript/-/typescript-3.5.2.tgz#a09e1dc69bc9551cadf17dba10ee42cf55e5d56c"
+  integrity sha1-oJ4dxpvJVRyt8X26EO5Cz1Xl1Ww=
 
 universalify@^0.1.0:
   version "0.1.2"
