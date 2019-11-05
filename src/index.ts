@@ -1,11 +1,12 @@
-import {configure,
+import {
+    configure,
     getLogger,
     addLayout,
     DateFileAppender,
     LogLevelFilterAppender,
 } from 'log4js';
-import {join} from 'path';
-import {jsonLayout} from './jsonLayout';
+import { join } from 'path';
+import { jsonLayout } from './jsonLayout';
 
 // 写在typings里面会覆盖模块自带的d.ts文件...
 declare module 'log4js' {
@@ -106,8 +107,8 @@ export function createLogger({
         ...customAppenders,
     };
 
+    // @ts-ignore
     configure({
-        // @ts-ignore
         levels,
         appenders,
         categories: {
