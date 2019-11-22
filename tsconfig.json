@@ -8,9 +8,10 @@
         "removeComments": true,
         "outDir": "lib",
         "moduleResolution": "node",
-        "allowSyntheticDefaultImports": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true
     },
     "include": [
         "src/**/*.ts",

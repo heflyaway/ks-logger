@@ -10,29 +10,29 @@
     date-fns "*"
 
 "@types/lodash@^4.14.134":
-  version "4.14.144"
-  resolved "https://npm.corp.kuaishou.com/@types%2flodash/-/lodash-4.14.144.tgz#12e57fc99064bce45e5ab3c8bc4783feb75eab8e"
-  integrity sha1-EuV/yZBkvOReWrPIvEeD/rdeq44=
+  version "4.14.149"
+  resolved "https://npm.corp.kuaishou.com/@types%2flodash/-/lodash-4.14.149.tgz#1342d63d948c6062838fbf961012f74d4e638440"
+  integrity sha1-E0LWPZSMYGKDj7+WEBL3TU5jhEA=
 
 "@types/node@^12.0.8":
-  version "12.12.5"
-  resolved "https://npm.corp.kuaishou.com/@types%2fnode/-/node-12.12.5.tgz#66103d2eddc543d44a04394abb7be52506d7f290"
-  integrity sha1-ZhA9Lt3FQ9RKBDlKu3vlJQbX8pA=
+  version "12.12.11"
+  resolved "https://npm.corp.kuaishou.com/@types%2fnode/-/node-12.12.11.tgz#bec2961975888d964196bf0016a2f984d793d3ce"
+  integrity sha1-vsKWGXWIjZZBlr8AFqL5hNeT084=
 
-date-fns@*:
-  version "2.6.0"
-  resolved "https://npm.corp.kuaishou.com/date-fns/-/date-fns-2.6.0.tgz#a5bc82e6a4c3995ae124b0ba1a71aec7b8cbd666"
-  integrity sha1-pbyC5qTDmVrhJLC6GnGux7jL1mY=
-
-date-fns@^1.30.1:
-  version "1.30.1"
-  resolved "https://npm.corp.kuaishou.com/date-fns/-/date-fns-1.30.1.tgz#2e71bf0b119153dbb4cc4e88d9ea5acfb50dc05c"
-  integrity sha1-LnG/CxGRU9u0zE6I2epaz7UNwFw=
+date-fns@*, date-fns@^2.8.0:
+  version "2.8.0"
+  resolved "https://npm.corp.kuaishou.com/date-fns/-/date-fns-2.8.0.tgz#628d865367e30e45747ed1e8b0c1572090b04f55"
+  integrity sha1-Yo2GU2fjDkV0ftHosMFXIJCwT1U=
 
 date-format@^2.1.0:
   version "2.1.0"
   resolved "https://npm.corp.kuaishou.com/date-format/-/date-format-2.1.0.tgz#31d5b5ea211cf5fd764cd38baf9d033df7e125cf"
   integrity sha1-MdW16iEc9f12TNOLr50DPffhJc8=
+
+date-format@^3.0.0:
+  version "3.0.0"
+  resolved "https://npm.corp.kuaishou.com/date-format/-/date-format-3.0.0.tgz#eb8780365c7d2b1511078fb491e6479780f3ad95"
+  integrity sha1-64eANlx9KxURB4+0keZHl4DzrZU=
 
 debug@^4.1.1:
   version "4.1.1"
@@ -41,7 +41,7 @@ debug@^4.1.1:
   dependencies:
     ms "^2.1.1"
 
-fast-safe-stringify@^2.0.6:
+fast-safe-stringify@^2.0.7:
   version "2.0.7"
   resolved "https://npm.corp.kuaishou.com/fast-safe-stringify/-/fast-safe-stringify-2.0.7.tgz#124aa885899261f68aedb42a7c080de9da608743"
   integrity sha1-EkqohYmSYfaK7bQqfAgN6dpgh0M=
@@ -77,16 +77,16 @@ lodash@^4.17.15:
   resolved "https://npm.corp.kuaishou.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha1-tEf2ZwoEVbv+7dETku/zMOoJdUg=
 
-log4js@^5.3.0:
-  version "5.3.0"
-  resolved "https://npm.corp.kuaishou.com/log4js/-/log4js-5.3.0.tgz#7e43fa49f516c2d11c71ae28eddffd508eef2ba8"
-  integrity sha1-fkP6SfUWwtEcca4o7d/9UI7vK6g=
+log4js@^6.1.0:
+  version "6.1.0"
+  resolved "https://npm.corp.kuaishou.com/log4js/-/log4js-6.1.0.tgz#51268154adb2eb5d8a594b2c77f024a77f047265"
+  integrity sha1-USaBVK2y612KWUssd/Akp38EcmU=
   dependencies:
-    date-format "^2.1.0"
+    date-format "^3.0.0"
     debug "^4.1.1"
     flatted "^2.0.1"
     rfdc "^1.1.4"
-    streamroller "^2.2.2"
+    streamroller "^2.2.3"
 
 ms@^2.1.1:
   version "2.1.2"
@@ -98,19 +98,19 @@ rfdc@^1.1.4:
   resolved "https://npm.corp.kuaishou.com/rfdc/-/rfdc-1.1.4.tgz#ba72cc1367a0ccd9cf81a870b3b58bd3ad07f8c2"
   integrity sha1-unLME2egzNnPgahws7WL060H+MI=
 
-streamroller@^2.2.2:
-  version "2.2.2"
-  resolved "https://npm.corp.kuaishou.com/streamroller/-/streamroller-2.2.2.tgz#26bea90567f80d8438d251e5603643fe617b7090"
-  integrity sha1-Jr6pBWf4DYQ40lHlYDZD/mF7cJA=
+streamroller@^2.2.3:
+  version "2.2.3"
+  resolved "https://npm.corp.kuaishou.com/streamroller/-/streamroller-2.2.3.tgz#b95c9fad44e2e89005d242141486b3b4962c2d28"
+  integrity sha1-uVyfrUTi6JAF0kIUFIaztJYsLSg=
   dependencies:
     date-format "^2.1.0"
     debug "^4.1.1"
     fs-extra "^8.1.0"
 
-typescript@^3.6.4:
-  version "3.6.4"
-  resolved "https://npm.corp.kuaishou.com/typescript/-/typescript-3.6.4.tgz#b18752bb3792bc1a0281335f7f6ebf1bbfc5b91d"
-  integrity sha1-sYdSuzeSvBoCgTNff26/G7/FuR0=
+typescript@^3.7.2:
+  version "3.7.2"
+  resolved "https://npm.corp.kuaishou.com/typescript/-/typescript-3.7.2.tgz#27e489b95fa5909445e9fef5ee48d81697ad18fb"
+  integrity sha1-J+SJuV+lkJRF6f717kjYFpetGPs=
 
 universalify@^0.1.0:
   version "0.1.2"

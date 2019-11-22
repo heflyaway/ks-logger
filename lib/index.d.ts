@@ -5,15 +5,18 @@ declare module 'log4js' {
     }
 }
 declare type LogRolling = 'day' | 'hour';
-interface DefaultLog {
+interface KeyValueMap {
     [key: string]: any;
 }
-export declare function createLogger({ serviceName, customLevels, daysToKeep, logRolling, debug, defaultLog }: {
+export declare function createLogger({ serviceName, customLevels, daysToKeep, logRolling, debug, defaultLog, singleLogFile, useServiceName, logDir, }: {
     serviceName: string;
     customLevels?: string[];
     daysToKeep?: number;
     logRolling?: LogRolling;
     debug?: boolean;
-    defaultLog?: DefaultLog;
+    defaultLog?: KeyValueMap;
+    singleLogFile?: boolean;
+    useServiceName?: boolean;
+    logDir?: string;
 }): import("log4js").Logger;
 export default createLogger;
