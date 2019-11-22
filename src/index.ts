@@ -35,11 +35,11 @@ export function createLogger({
     customLevels = [],
     daysToKeep = 1, // 日志文件保留天数
     logRolling = 'day', // 日志切割方式 按天或者按小时
-    debug = false, // debug模式下, 日志会写入文件
+    debug = false, // debug模式下, 日志会写入文件, 可用于本地调试
     defaultLog = {}, // 业务传入的默认日志
-    singleLogFile = false, // 单文件模式, 所有日志写入同一个文件
-    useServiceName = true, // 日志名带上serviceName, 这在多个项目混合部署的时候可以区分日志文件
-    logDir = '', // 日志文件目录
+    singleLogFile = true, // 单文件模式, 所有日志写入同一个文件
+    useServiceName = false, // 日志名带上serviceName, 这在多个项目混合部署的时候可以区分日志文件
+    logDir, // 日志文件目录
 }: {
     serviceName: string,
     customLevels?: string[],
@@ -153,8 +153,8 @@ function getLogFilename({
     useServiceName: boolean,
     logDir: string,
 }) {
-    // 如果不指定logDir, 则默认为根目录下log文件夹
-    const logPath = logDir || join(process.cwd(), 'log');
+    // 如果不指定logDir, 则默认为根目录下logs文件夹
+    const logPath = logDir || join(process.cwd(), 'logs');
     let filename = 'common';
     if (useServiceName) {
         filename = `${serviceName}-${singleLogFile ? 'common' : appenderName}`;
