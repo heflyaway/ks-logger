@@ -4,7 +4,7 @@ import {isPlainObject} from 'lodash';
 import stringifySafe from 'fast-safe-stringify';
 
 function formatUTCDate(date: Date) {
-    return format(new Date(date), 'YYYY-MM-DD HH:mm:ss.SSS');
+    return format(new Date(date), 'yyyy-MM-DD HH:mm:ss.SSS');
 }
 
 // 日志转json
